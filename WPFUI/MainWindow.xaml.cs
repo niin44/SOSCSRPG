@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Engine.ViewModels;
 
 namespace WPFUI
 {
@@ -20,9 +21,19 @@ namespace WPFUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private GameSession _gameSeassion;
         public MainWindow()
         {
             InitializeComponent();
+
+            _gameSeassion = new GameSession();
+
+            DataContext = _gameSeassion;
+
+        }
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            _gameSeassion.CurrentPlayer.ExperiencePoints += 10;
         }
     }
 }
