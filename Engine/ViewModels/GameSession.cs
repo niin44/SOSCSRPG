@@ -23,10 +23,10 @@ namespace Engine.ViewModels
 
             CurrentLocation = new Location();
             CurrentLocation.Name = "Home";
-            CurrentLocation.XCordinate = 0;
-            CurrentLocation.YCodrinate = -1;
+            CurrentLocation.XCoordinate = 0;
+            CurrentLocation.YCoordinate = -1;
             CurrentLocation.Description = "This is your house.";
-
+            CurrentLocation.ImageName = "/Engine;component/Images/Locations/Home.png";
         }
     }
 }
